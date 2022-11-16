@@ -4,6 +4,7 @@ import ch_2_1.exer_19;
 
 import java.util.Iterator;
 
+// implementation of exercise 19 20 21 30
 public class exer_19_30<T> implements Iterable<T>
 {
     private class Node
