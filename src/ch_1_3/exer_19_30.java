@@ -1,8 +1,10 @@
 package ch_1_3;
 
+import ch_2_1.exer_19;
+
 import java.util.Iterator;
 
-public class exer_19<T> implements Iterable<T>
+public class exer_19_30<T> implements Iterable<T>
 {
     private class Node
     {
@@ -145,7 +147,7 @@ public class exer_19<T> implements Iterable<T>
 
     }
 
-    public boolean find( exer_19<T> list, String key)
+    public boolean find( exer_19_30<T> list, String key)
     {
         Node first = list.first;
         for ( Node i = first; i != null; i = i.next)
@@ -158,7 +160,7 @@ public class exer_19<T> implements Iterable<T>
         return false;
     }
 
-    public void remove_key_nodes( exer_19<T> list, String key)
+    public void remove_key_nodes( exer_19_30<T> list, String key)
     {
         Node previous = list.first; // track the previous node of the current node
         for ( Node current = list.first; current != null; current = current.next)
@@ -246,7 +248,7 @@ public class exer_19<T> implements Iterable<T>
     private class iterate implements Iterator<T>
     {
         // no need to specify the generic type <T> because the inner class's type is the same as the outer class by default.
-        Node current = exer_19.this.current;
+        Node current = exer_19_30.this.current;
         public boolean hasNext() { return current != null; }
 
         public T next()
@@ -259,7 +261,7 @@ public class exer_19<T> implements Iterable<T>
 
     public static void main(String[] args)
     {
-        var list = new exer_19<String>();
+        var list = new exer_19_30<String>();
         list.add("h");
         list.add("o");
         list.add("u");
@@ -284,7 +286,7 @@ public class exer_19<T> implements Iterable<T>
         list.print();
 
         //test delete()
-        var list2 = new exer_19<String>();
+        var list2 = new exer_19_30<String>();
         list2.add("g");
         list2.add("r");
         list2.add("e");
@@ -294,7 +296,7 @@ public class exer_19<T> implements Iterable<T>
         list2.print();
 
         // test find()
-        var list3 = new exer_19<String>();
+        var list3 = new exer_19_30<String>();
         list3.add("b");
         list3.add("l");
         list3.add("u");
@@ -305,7 +307,7 @@ public class exer_19<T> implements Iterable<T>
         }
 
         // test remove_key_nodes()
-        var list4 = new exer_19<String>();
+        var list4 = new exer_19_30<String>();
         list4.add("b");
         list4.add("o");
         list4.add("s");
@@ -313,7 +315,7 @@ public class exer_19<T> implements Iterable<T>
         list4.remove_key_nodes(list4, "s");
         list4.print();
 
-        var list5 = new exer_19<String>();
+        var list5 = new exer_19_30<String>();
         list5.add("a");
         list5.add("r");
         list5.add("e");
@@ -322,14 +324,14 @@ public class exer_19<T> implements Iterable<T>
         list5.print();
 
         // test max() recursive
-        var list6 = new exer_19<Integer>();
+        var list6 = new exer_19_30<Integer>();
         list6.add(3);
         list6.add(1);
         list6.add(2);
         System.out.println(list6.max(list6.first));
 
         // test reverse() exercise 30
-        var list7 = new exer_19<Integer>();
+        var list7 = new exer_19_30<Integer>();
         list7.add(10);
         list7.add(11);
         list7.add(12);
